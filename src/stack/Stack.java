@@ -4,30 +4,37 @@ public class Stack{
 	int top = -1;
 	private int stk[];
 	
-	public Stack() {
+	public Stack()
+	{
 		this.top = -1;
 		this.stk = new int[10];
 	}
 	
-	public Stack(int maxSize) {
+	public Stack(int maxSize)
+	{
 		this.top = -1;
 		this.stk = new int[maxSize];
 	}
 	
-	public boolean push(int data){
-		if(isFull()) {
+	public boolean push(int data)
+	{
+		if(isFull()) 
+		{
 			System.out.print("Stack overflow.");
 			return false;
 		}
-		else {
+		else 
+		{
 			stk[++top] = data;
 			System.out.println(data + " pushed into stack.");
 			return true;
 		}
 	}
 	
-	public int pop() {
-		if(isEmpty()) {
+	public int pop() 
+	{
+		if(isEmpty()) 
+		{
 			System.out.print("Stack underflow.");
 			return 0;
 		}
